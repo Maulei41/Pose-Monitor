@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"..\CCIT4080A")
+sys.path.append(r"..\Pose-Monitor-main")
 import cv2
 import streamlit as st
 from ml import Classifier, Draw_predict
