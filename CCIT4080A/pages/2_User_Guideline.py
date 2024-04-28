@@ -19,8 +19,6 @@ with st.sidebar:
     mem4.write("Sunny Chen")
     st.header("", divider="red")
 
-st.subheader("Here is the user guideline video")
-st.video('user_guideline.mp4')
 
 st.subheader("Here is the user guideline video")
 st.video('user_guideline.mp4')
