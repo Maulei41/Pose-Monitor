@@ -121,7 +121,6 @@ if webRTC.state.playing:
             keypoint_score += result[:, 2][keypoint_num]
             keypoint_num += 1
         keypoint_score = keypoint_score / 17
-        print(keypoint_score)
         if keypoint_score > th1:
             missing_counter = 0
             if label == "non_standard":
