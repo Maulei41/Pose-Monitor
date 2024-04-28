@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r"..\CCIT4080A\ml")
+sys.path.append(r"..Pose-Monitor\CCIT4080A\ml")
 sys.path.append(r"..\CCIT4080A")
 
 import av
