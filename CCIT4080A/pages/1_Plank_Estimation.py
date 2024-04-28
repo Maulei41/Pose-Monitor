@@ -51,7 +51,7 @@ Standard_Sound2 = add_html.autoplay_audio("Standard_Sound2.mp3")
 Standard_Sound3 = add_html.autoplay_audio("Standard_Sound3.mp3")
 Non_Standard_Sound1 = add_html.autoplay_audio("Non_Standard_Sound1.mp3")
 Non_Standard_Sound2 = add_html.autoplay_audio("Non_Standard_Sound2.mp3")
-popup = add_html.popup_window()
+
 
 KEYPOINT = ["nose", "left eye", "right eye", "left ear", "right ear", "left shoulder", "right shoulder", "left elbow", "right elbow", "left wrist", "right wrist", "left hip", "right hip", "left knee", "right knee", "left ankle", "right ankle"]
 result_queue: "queue.Queue[List[Detection]]" = queue.Queue()
