@@ -69,3 +69,7 @@ predic2 = pd.DataFrame({"Non Standard" : [str(round(output2[0]*100, 2)) + "%"],
                        "Standard" : [str(round(output2[1]*100, 2)) + "%"]}, index= ["prediction"])
 col4.table(predic2)
 st.header("", divider="red")
+st.image("Poster.jpg")
+st.header("", divider="red")
+st.subtitle("GitHub Source Code:")
+st.write("https://pose-monitor.streamlit.app/")
