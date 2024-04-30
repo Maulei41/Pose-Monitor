@@ -1,4 +1,5 @@
 # Pose-Monitor
+## Code structure
 ```shell
 Pose-Monitor
 ├───.idea
@@ -46,6 +47,7 @@ Pose-Monitor
 └───test.py
 └───user_guideline.mp4
 ```
+## Poster
 ![Poster](Poster.jpg)
 ## DEMO 
 (https://pose-monitor.streamlit.app/)
