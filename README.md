@@ -2,6 +2,10 @@
 ![Poster](Poster.jpg)
 ## DEMO 
 (https://pose-monitor.streamlit.app/)
+## Normal User guideline
+![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Ilvtjpx4msE/0.jpg)
+
+(https://youtu.be/Ilvtjpx4msE)
 ## For deploy in server or in computer
 please download the .zip file and extract it.
 
