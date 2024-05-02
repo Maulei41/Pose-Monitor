@@ -66,7 +66,7 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
     keypoints_with_scores = movenet.movenet(image)
     x, y, c = image.shape
     pose_class_names, output = classify.classtify(keypoints_with_scores)
-        maxConfidence = 0
+    maxConfidence = 0
     for i in range(len(output)):
         if output[i] > maxConfidence:
             maxConfidence = output[i]
