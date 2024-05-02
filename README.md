@@ -54,6 +54,7 @@ Pose-Monitor
 | | | └───standard
 | | | └───non_standard
 └───train_TFmodel.py
+└───LICENSE
 ```
 ## Poster
 ![Poster](Poster.jpg)
