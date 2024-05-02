@@ -112,7 +112,7 @@ $ ./ssl-proxy -from 0.0.0.0:8000 -to 127.0.0.1:8501  # Proxy the HTTP page from 
 ```
 
 ## For self-training classification model in local environment
-
+please download the .zip file and extract it
 ## Install
 please make sure to use pip install the following lirbaries into your IDE:
 ```shell
@@ -131,3 +131,6 @@ please make sure your training dataset is structured as follows
 | └───label_1
 | └───label_2
 ```
+## RUN
+please open the Train_TFmodel.py in your Python IDE
+This Train_TFmodel.py is based on the [TensorFlow tutorial example](https://tensorflow.google.cn/lite/tutorials/pose_classification?hl=zh-cn), I had to edit something to make it run in the local environment.
