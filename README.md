@@ -134,3 +134,14 @@ please make sure your training dataset is structured as follows
 ## RUN
 please open the Train_TFmodel.py in your Python IDE
 This Train_TFmodel.py is based on the [TensorFlow tutorial example](https://tensorflow.google.cn/lite/tutorials/pose_classification?hl=zh-cn), I had to edit something to make it run in the local environment.
+
+please modify the line 49 to
+```shell
+unzip_file('your_dataset.zip', 'your_dataset')
+```
+
+and press the run bottom on Your Python IDE to run Train_TFmodel.py
+after running the Train_TFmodel.py, you will receive two outputs:
+pose_classifier.tflite and pose_label
+both of them will auto-replace the old one
+
