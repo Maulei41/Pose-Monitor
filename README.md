@@ -83,7 +83,7 @@ cd CCIT4080A
 
 than, you can use these command to run the program in the Python IDE
 ```shell
-Streamlight run Home.py
+Streamlit run Home.py
 ```
 
 ### HTTPS
