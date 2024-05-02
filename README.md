@@ -46,6 +46,13 @@ Pose-Monitor
 └───requirements.txt
 └───test.py
 └───user_guideline.mp4
+| ├───plank_pose.zip
+| | └───train
+| | | └───standard
+| | | └───non_standard
+| | └───test
+| | | └───standard
+| | | └───non_standard
 └───train_TFmodel.py
 ```
 ## Poster
@@ -60,7 +67,7 @@ Pose-Monitor
 please download the .zip file and extract it.
 
 ### Install
-please make sure to use pip install the following lirbaries into your IDE:
+please make sure to use pip install the following lirbaries into your Python IDE:
 ```shell
 pip install Pyav, streamlit, streamlit-webrtc, opencv-python-headless, pandas, numpy, tensorflow
 ```
@@ -75,7 +82,7 @@ cd CCIT4080A
 
 than, you can use these command to run the program in the Python IDE
 ```shell
-streamlit run Home.py
+Streamlight run Home.py
 ```
 
 ### HTTPS
@@ -101,3 +108,17 @@ $ streamlit run your_app.py  # Assume your app is running on http://localhost:85
 # Then, after downloading the binary from the GitHub page above to ./ssl-proxy,
 $ ./ssl-proxy -from 0.0.0.0:8000 -to 127.0.0.1:8501  # Proxy the HTTP page from port 8501 to port 8000 via HTTPS
 # Then access https://localhost:8000
+```
+
+## For self-training classification model in local environment
+
+## Install
+please make sure to use pip install the following lirbaries into your IDE:
+```shell
+pip install pandas, matplotlib, tensorflow, keras, scikit-learn, opencv-python, numpy
+```
+## prepare the file of the training data set
+please replace the plank_pose.zip with your own training dataset
+
+please make sure your own training dataset is sp
+
