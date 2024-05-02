@@ -66,10 +66,12 @@ def video_frame_callback(frame: av.VideoFrame) -> av.VideoFrame:
     keypoints_with_scores = movenet.movenet(image)
     x, y, c = image.shape
     pose_class_names, output = classify.classtify(keypoints_with_scores)
-    if output[0] >= output[1]:
-        output_label = pose_class_names[0]
-    else:
-        output_label = pose_class_names[1]
+        maxConfidence = 0
+    for i in range(len(output)):
+        if output[i] > maxConfidence:
+            maxConfidence = output[i]
+            maxPos = i
+    output_label =pose_class_names[maxPos]
     output_queue.put(output)
     label_queue.put(output_label)
     draw_predict.draw_connections(image, keypoints_with_scores, th1)
