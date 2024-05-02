@@ -47,10 +47,12 @@ def run_detect(input_image_path):
     input_image = tf.image.decode_jpeg(input_image)
     keypoints_with_scores = movenet.movenet(input_image)
     pose_class_names, output = classify.classtify(keypoints_with_scores)
-    if output[0] >= output[1]:
-        output_label =pose_class_names[0]
-    else:
-        output_label =pose_class_names[1]
+    maxConfidence = 0
+    for i in range(len(output)):
+    if output[i] > maxConfidence:
+        maxConfidence = output[i]
+        maxPos = i
+    output_label =pose_class_names[i]
     draw_predict.draw_connections(display_image, keypoints_with_scores, 0.3)
     draw_predict.draw_keypoints(display_image, keypoints_with_scores, 0.3)
     display_image = cv2.resize(display_image, (612, 408))
