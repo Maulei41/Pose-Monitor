@@ -120,5 +120,13 @@ pip install pandas, matplotlib, tensorflow, keras, scikit-learn, opencv-python, 
 ## prepare the file of the training data set
 please replace the plank_pose.zip with your own training dataset
 
-please make sure your own training dataset is sp
-
+please make sure your training dataset is structured as follows
+```shell
+├───your_dataset.zip
+| └───train
+| | └───label_1
+| | └───label_2
+| └───test
+| └───label_1
+| └───label_2
+```
