@@ -44,7 +44,6 @@ classify = Classifier("pose_classifier.tflite", "pose_labels.txt")
 draw_predict = Draw_predict()
 # Audio Feedback: Different audio cues are provided based on the user's performance during the exercise.
 add_html = Add_html()
-Error = add_html.autoplay_audio("Error.mp3")
 Missing_Sound = add_html.autoplay_audio("Missing_sound.mp3")
 Standard_Sound1 = add_html.autoplay_audio("Standard_Sound1.mp3")
 Standard_Sound2 = add_html.autoplay_audio("Standard_Sound2.mp3")
