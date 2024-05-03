@@ -7,10 +7,10 @@ from ml import Movenet
 import tensorflow as tf
 import pandas as pd
 
-st.set_page_config(page_title="∀ ASS", page_icon="For_ASS.jpeg", layout="centered")
+st.set_page_config(page_title="Pose-Monitor", page_icon="For_ASS.jpeg", layout="centered")
 col1, col2 = st.columns([1, 8])
 col1.image("For_ASS.jpeg")
-col2.title("∀ ASS")
+col2.title("Pose-Monitor")
 st.header("", divider="red")
 
 
