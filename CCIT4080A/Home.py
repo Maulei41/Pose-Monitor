@@ -42,6 +42,8 @@ draw_predict = Draw_predict.Draw_predict()
 # The run_detect function processes input images, detects poses, classifies them, and returns the display image, pose label, and classification output.
 def run_detect(input_image_path):
     display_image = cv2.imread(input_image_path)
+    if display_image is None:
+            raise FileNotFoundError("Image not found.")
     input_image = tf.io.read_file(input_image_path)
     input_image = tf.image.decode_jpeg(input_image)
     keypoints_with_scores = movenet.movenet(input_image)
@@ -57,16 +59,24 @@ def run_detect(input_image_path):
     display_image = cv2.resize(display_image, (612, 408))
     return display_image, output_label, output
 # Two sample images are processed using the run_detect function, and the results are displayed in a tabular format using Streamlit.
-image1_path = "test/Standard1.jpg"
-display_image_1, display_label_1, output1 = run_detect(image1_path)
-col3.image(display_image_1, caption= display_label_1)
-predic1 = pd.DataFrame({"Non Standard" : [str(round(output1[0]*100, 2)) + "%"],
+try:
+    image1_path = "test/Standard1.jpg"
+    display_image_1, display_label_1, output1 = run_detect(image1_path)
+except FileNotFoundError as e:
+    image1_path = "CCIT4080A/test/Standard1.jpg"
+    display_image_1, display_label_1, output1 = run_detect(image1_path)
+    col3.image(display_image_1, caption= display_label_1)
+    predic1 = pd.DataFrame({"Non Standard" : [str(round(output1[0]*100, 2)) + "%"],
                        "Standard" : [str(round(output1[1]*100, 2)) + "%"]}, index= ["prediction"])
 col3.table(predic1)
-image2_path = "test/_NonStandard1.jpg"
-display_image_2, display_label_2 , output2 = run_detect(image2_path)
-col4.image(display_image_2, caption= display_label_2)
-predic2 = pd.DataFrame({"Non Standard" : [str(round(output2[0]*100, 2)) + "%"],
+try:
+    image2_path = "test/_NonStandard1.jpg"
+    display_image_2, display_label_2 , output2 = run_detect(image2_path)
+except FileNotFoundError as e:
+    image1_path = "CCIT4080A/test/Standard1.jpg"
+    display_image_1, display_label_1, output1 = run_detect(image1_path)
+    col4.image(display_image_2, caption= display_label_2)
+    predic2 = pd.DataFrame({"Non Standard" : [str(round(output2[0]*100, 2)) + "%"],
                        "Standard" : [str(round(output2[1]*100, 2)) + "%"]}, index= ["prediction"])
 col4.table(predic2)
 st.header("", divider="red")
