@@ -73,8 +73,8 @@ try:
     image2_path = "test/_NonStandard1.jpg"
     display_image_2, display_label_2 , output2 = run_detect(image2_path)
 except FileNotFoundError as e:
-    image1_path = "CCIT4080A/test/Standard1.jpg"
-    display_image_1, display_label_1, output1 = run_detect(image1_path)
+    image2_path = "CCIT4080A/test/_NonStandard1.jpg"
+    display_image_1, display_label_2 , output2 = run_detect(image2_path)
     col4.image(display_image_2, caption= display_label_2)
     predic2 = pd.DataFrame({"Non Standard" : [str(round(output2[0]*100, 2)) + "%"],
                        "Standard" : [str(round(output2[1]*100, 2)) + "%"]}, index= ["prediction"])
